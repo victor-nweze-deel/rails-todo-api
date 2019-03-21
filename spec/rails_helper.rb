@@ -34,12 +34,10 @@ end
 
 # [...]
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
-# [...]
-RSpec.configuration do |config|
-  # [...]
-  config.include RequestSpecHelper, type: :request
-  # [...]
-end
+# # [...]
+# RSpec.configuration do |config|
+
+# end
 
 # [...]
 # Configure shoulda matchers to use rspec as the test framework and full
@@ -52,6 +50,10 @@ Shoulda::Matchers.configure do |config|
 end
 
 RSpec.configure do |config|
+  # [...]
+  config.include RequestSpecHelper
+  # [...]
+  config.include ControllerSpecHelper
   # [...]
   # add `FactoryBot` methods
   config.include FactoryBot::Syntax::Methods
