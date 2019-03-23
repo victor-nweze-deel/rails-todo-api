@@ -21,6 +21,11 @@ gem 'bcrypt'
 # Add jwt for authentication
 gem 'jwt'
 
+# Add simple cov for coverage reports
+gem 'simplecov'
+
+gem 'simplecov-console'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
